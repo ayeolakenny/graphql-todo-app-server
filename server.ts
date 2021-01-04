@@ -8,6 +8,8 @@ import * as dotenv from "dotenv";
 const app = express();
 dotenv.config();
 
+const PORT = process.env.PORT || 5000;
+
 // Allow cross-origin request
 app.use(cors());
 
@@ -30,6 +32,6 @@ app.use(
   })
 );
 
-app.listen(process.env.PORT, () => {
-  console.log(`Now listening to port ${process.env.PORT}`);
-});
+// app.listen(process.env.PORT, () => {
+//   console.log(`Now listening to port ${process.env.PORT}`);
+// });

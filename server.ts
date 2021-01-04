@@ -32,6 +32,6 @@ app.use(
   })
 );
 
-// app.listen(process.env.PORT, () => {
-//   console.log(`Now listening to port ${process.env.PORT}`);
-// });
+app.listen(PORT, () => {
+  console.log(`Now listening to port ${PORT}`);
+});

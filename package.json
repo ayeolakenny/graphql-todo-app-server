@@ -7,6 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "ts-node server.ts"
   },
+   "engines": {
+    "node": "14.15.3"
+   },
   "keywords": [],
   "author": "",
   "license": "ISC",

@@ -3,18 +3,17 @@ import { graphqlHTTP } from "express-graphql";
 import mongoose from "mongoose";
 import cors from "cors";
 const schema = require("./schema/schema");
+import * as dotenv from "dotenv";
 
 const app = express();
+dotenv.config();
 
 // Allow cross-origin request
 app.use(cors());
 
-mongoose.connect(
-  "mongodb+srv://ayeolakenny:2969529697@todo.icjil.mongodb.net/todo?retryWrites=true&w=majority",
-  {
-    useNewUrlParser: true,
-  }
-);
+mongoose.connect(process.env.DB_CONN!, {
+  useNewUrlParser: true,
+});
 
 const db = mongoose.connection;
 

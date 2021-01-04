@@ -30,6 +30,6 @@ app.use(
   })
 );
 
-app.listen(4000, () => {
-  console.log("Now listening to port 4000");
+app.listen(process.env.PORT, () => {
+  console.log(`Now listening to port ${process.env.PORT}`);
 });
